@@ -1,0 +1,34 @@
+
+# Site settings
+title: aneta_bielska
+tagline: "[:blog]"
+email: aneta.bielska.dev@gmail.com
+description: >
+  blog mostly about programming
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://aneta-bielska.github.io/" # the base hostname & protocol for your site
+twitter_username: aneta_bielska
+github_username:  aneta-bielska
+
+# Build settings
+markdown: kramdown
+gems: [jekyll-paginate]
+
+
+
+author:
+  name:       "Aneta"
+  email:      "aneta.bielska.dev@gmail.com"
+  twitter:    "aneta_bielska"
+  github:     "aneta-bielska"
+  linkedin:   "aneta-bielska-93700454"
+  disqus:     "codebloge"
+
+github:
+  url:               "https://aneta-bielska.github.io/"
+paginate:            5
+baseurl:            #"/Blog"
+
+highlighter:         rouge
+permalink:           none
+
