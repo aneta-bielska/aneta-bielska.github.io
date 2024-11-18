@@ -1,13 +1,10 @@
 ---
 layout: post
-title: "Rails console: six ways to get pretty output "
-date: 2016-07-23 11:00:23 +0100
-categories: blog
-tags:
-- ruby-on-rails
-image:
-  feature: empty-large.png
-  teaser: empty-small.png
+title: "How to get pretty ruby console output"
+author: "Aneta Bielska"
+categories: journal
+tags: [ruby,programming]
+# image: mountains.jpg
 ---
 
 <style type="text/css">
@@ -28,6 +25,13 @@ Example:
  => #<Movie id: 1, title: "Batman", year: 1989, genre: "Action, Adventure", director: "Tim Burton", production: "USA, Great Britain", boxoffice: "$411 348 924", description: "The Dark Knight of Gotham City begins his war on c...", score: 7.6, created_at: "2016-07-23 09:47:15", updated_at: "2016-07-23 09:47:15">
 ```
 
+# Built-in tools
+
+## Yaml
+
+```
+y Movie.first
+```
 
 # Solutions
 
@@ -147,7 +151,7 @@ Awesome_print example:
 
 ### [Hirb][hirb]
 
-Add `gem 'girb'` to Gemfile and bundle. In rails console:
+Add `gem 'hirb'` to Gemfile and bundle. In rails console:
 
 ```
 > require 'hirb'
