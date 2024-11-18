@@ -1,0 +1,102 @@
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  aspect-ratio: 4/3;
+  width: 100%;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  font-family: "Quattrocento Sans", sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3px, 1vw, 8px);
+  border-radius: 8px;
+  font-size: var(--dynamic-font-size, clamp(5px, 0.8vw, 10px));
+  line-height: 1.2;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+
+.card-front {
+  background-color: #cbcbcb;
+  color: white;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.informational_requests { background-color: #82C3C9; }
+.successful_requests { background-color: #6AC66B; }
+.redirects { background-color: #F8D65D; }
+.client_errors { background-color: #FFBD59; }
+.server_errors { background-color: #FF5758; }
+
+
+.stats {
+  text-align: center;
+  margin: 10px;
+}
+
+.restart-btn {
+    background-color: #2196F3;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.restart-btn:hover {
+    background-color: #1976D2;
+}
+
+.restart-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
