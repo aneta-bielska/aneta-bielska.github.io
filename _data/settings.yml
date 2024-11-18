@@ -1,0 +1,30 @@
+# Change 'comments' to true for Disqus comments
+disqus:
+  comments: true
+  disqus_shortname: 'codebloge'
+
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+# google-ID: 'UA-XXXXXXXXX-X'
+
+menu:
+- {name: 'Articles', url: ''}
+- {name: 'Games',   url: 'games.html'}
+- {name: 'About',   url: 'about.html'}
+# - {name: 'Contact', url: 'contact.html'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+social:
+- {icon: 'fa-brands fa-github',    link: 'https://github.com/aneta-bielska'}
+- {icon: 'fa-brands fa-x-twitter', link: 'https://x.com/aneta_bielska'}
+- {icon: 'fa-brands fa-linkedin',  link: 'https://www.linkedin.com/in/aneta-bielska-93700454/'}
+- {icon: 'fa-solid fa-envelope',   link: 'mailto:aneta.bielska.dev@gmail.com'}
+- {icon: 'fa-solid fa-rss',        link: '/feed.xml'}
+
+# Customize site text
+pagination:
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+post_date_prefix: 'Written on'
+related_posts: 'You may also enjoy:'
+sharing_button_prompt: 'Feel free to share!'

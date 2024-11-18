@@ -1,34 +1,29 @@
+# Site Build Settings
 
-# Site settings
-title: aneta_bielska
-tagline: "[:blog]"
-email: aneta.bielska.dev@gmail.com
-description: >
-  blog mostly about programming
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://aneta-bielska.github.io/" # the base hostname & protocol for your site
-twitter_username: aneta_bielska
-github_username:  aneta-bielska
+# Jekyll-paginate-v2 configuration
+#  pagination:
+#   enabled: true
+#   per_page: 5
+#   permalink: '/page/:num/'
+#   title: ':title - page :num of :max'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
+
+# jekyll-paginate configuration
+paginate:            5
 
 # Build settings
-markdown: kramdown
-gems: [jekyll-paginate]
-
-
-
-author:
-  name:       "Aneta"
-  email:      "aneta.bielska.dev@gmail.com"
-  twitter:    "aneta_bielska"
-  github:     "aneta-bielska"
-  linkedin:   "aneta-bielska-93700454"
-  disqus:     "codebloge"
-
-github:
-  url:               "https://aneta-bielska.github.io/"
-paginate:            5
-baseurl:            #"/Blog"
-
+markdown:            kramdown
 highlighter:         rouge
-permalink:           none
+permalink:           /:title
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           'aneta_bielska'
+description:	       '[:blog]'
+author:              'Aneta Bielska'
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml

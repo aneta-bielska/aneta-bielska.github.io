@@ -1,10 +1,10 @@
 <div class="menu">
-  <div class="menu-content">
-    <a href="/archives.html">Archives</a>
-    <a href="/about.html">About</a>
-    <!-- <a href="/games.html">Games</a> -->
-  </div>
-  <div class="social-icons">
-    {% include socials.html %}
-  </div>
+  <nav class="menu-content">
+    {% for item in site.data.settings.menu %}
+      <a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+  <nav class="social-icons">
+    {% include social-icons.html %}
+  </nav>
 </div>

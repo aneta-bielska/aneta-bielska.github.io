@@ -1,11 +1,9 @@
-{% include tagz.html %}
-
 <footer class="footer">
-
-  {% include socials.html %}
-
-  <div class="post-date">
-    <a href="/about.html">{{ site.title }} | {{ site.tagline }} by {{ site.author.name }}</a>
+  <div class="tag-cloud">
+    {% for tag in site.tags %}
+      <a href="/tag/{{ tag[0] }}/" class="tag-item">#{{ tag[0] }} ({{ tag[1] | size }})</a>
+    {% endfor %}
   </div>
-
+  {% include social-icons.html %}
+  <div class="footer-description"><a href="{{ site.github.url }}/">{{ site.title }}{{ site.description }}</a></div>
 </footer>
