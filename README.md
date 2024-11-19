@@ -1,3 +1,3 @@
 #### visit my blog:
 
-[aneta-bielska.github.io](http://aneta-bielska.github.io/)
+[aneta-bielska.github.io](https://aneta-bielska.github.io/)
