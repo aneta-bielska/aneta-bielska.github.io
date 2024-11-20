@@ -1,5 +1,6 @@
 <head>
   <!-- Google tag (gtag.js) -->
+  {% if jekyll.environment == 'production' %}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G21DWEJW5H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -8,6 +9,7 @@
 
     gtag('config', 'G-G21DWEJW5H');
   </script>
+  {% endif %}
   <title>
     {% if page.title == "Home" %}
       {{ site.title }} | {{ site.description }}
