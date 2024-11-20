@@ -1,0 +1,9 @@
+<h4><span class="tag-item">Posts with tag</span> {{ include.tag }}</h4>
+
+{% for post in site.posts %}
+  {% if post.tags contains include.tag %}
+    <h2>
+      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+    </h2>
+  {% endif %}
+{% endfor %}

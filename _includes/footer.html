@@ -1,9 +1,9 @@
 <footer class="footer">
   <div class="tag-cloud">
     {% for tag in site.tags %}
-      <a href="/tag/{{ tag[0] }}/" class="tag-item">#{{ tag[0] }} ({{ tag[1] | size }})</a>
+      <a href="/tag/{{ tag[0] }}" class="tag-item">#{{ tag[0] }} ({{ tag[1] | size }})</a>
     {% endfor %}
   </div>
   {% include social-icons.html %}
-  <div class="footer-description"><a href="{{ site.github.url }}/">{{ site.title }}{{ site.description }}</a></div>
+  <div class="footer-description"><a href="{{ site.github.url }}">{{ site.title }}{{ site.description }}</a></div>
 </footer>
