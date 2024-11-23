@@ -22,10 +22,15 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'aneta_bielska'
 description:	       '[:blog]'
-author:              'Aneta Bielska'
+author:              'Aneta'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://aneta-bielska.github.io/" # the base hostname & protocol for your site
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://aneta-bielska.github.io/' # the base hostname & protocol for your site
+
+collections:
+  games:
+    output: true
+    permalink: /games/:title

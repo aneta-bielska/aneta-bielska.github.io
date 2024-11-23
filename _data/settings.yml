@@ -27,4 +27,5 @@ pagination:
 
 post_date_prefix: 'Written on'
 related_posts: 'You may also enjoy:'
+related_games: 'You may also enjoy:'
 sharing_button_prompt: 'Feel free to share!'

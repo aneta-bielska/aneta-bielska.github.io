@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "How to get pretty ruby console output"
-author: "Aneta Bielska"
 categories: journal
 tags: [ruby,programming]
 # image: mountains.jpg

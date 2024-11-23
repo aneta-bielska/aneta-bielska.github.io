@@ -2,7 +2,7 @@
 layout: post
 title: "Memory game - HTTP status codes"
 author: "Aneta"
-categories: journal
+categories: games
 tags: [games]
 ---
 

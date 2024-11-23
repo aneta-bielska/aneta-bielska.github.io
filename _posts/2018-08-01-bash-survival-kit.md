@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Bash - survival kit"
-author: "Aneta"
 categories: journal
 tags: [programming]
 image: bash.jpg

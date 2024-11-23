@@ -1,0 +1,17 @@
+<div class="related">
+  <h1 >{{ site.data.settings.related_posts }}</h1>
+  <ul class="related-posts">
+    {% for game in site.games limit:3 %}
+      {% if game.url == page.url %}
+      {% else %}
+        <li>
+          <h3>
+            <a href="{{ site.github.url }}{{ game.url }}">
+              {{ game.title }}
+            </a>
+          </h3>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

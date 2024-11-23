@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Test types and Ruby libraries"
-author: "Aneta"
 categories: journal
 tags: [programming]
 ---
