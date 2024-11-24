@@ -5,6 +5,8 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
 .card {
@@ -21,7 +23,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.4s;
+  transition: transform 0.3s;
   transform-style: preserve-3d;
   transform-origin: center center;
 }
@@ -29,8 +31,9 @@
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
+
 .card-front, .card-back {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Arial', sans-serif;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -48,7 +51,6 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
-
 
 .card-front {
   background-color: #cbcbcb;
@@ -73,10 +75,37 @@
 .client_errors { background-color: #FFBD59; }
 .server_errors { background-color: #FF5758; }
 
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
 
-.stats {
+#timer {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transform: translateX(24px);
+}
+
+.game-complete-wrapper {
+  height: 30px;
   text-align: center;
-  margin: 10px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+}
+
+#game-complete-message {
+  padding-top: 4px;
 }
 
 .restart-btn {
@@ -90,6 +119,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    order: -1;
 }
 
 .restart-btn:hover {
@@ -99,4 +129,16 @@
 .restart-btn:active {
     transform: translateY(1px);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+#moves, #pairs {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
 }

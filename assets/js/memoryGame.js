@@ -1,4 +1,5 @@
 import { httpStatusCodes } from './httpStatusCodes.js';
+import { startTimer, resetTimer, stopTimer } from './timer.js';
 
 class MemoryGame {
   constructor(container) {
@@ -24,6 +25,8 @@ class MemoryGame {
     this.cards = this.shuffleCards([...codePairs, ...messagePairs]);
     this.renderBoard();
     this.updateStats();
+    resetTimer();
+    startTimer();
   }
 
   getRandomPairs(count) {
@@ -83,10 +86,14 @@ class MemoryGame {
     if (this.flippedCards.includes(index)) return;
 
     const cardElement = this.container.children[index];
+
+    if (cardElement.classList.contains('matched')) return;
+
     cardElement.classList.add('flipped');
     this.flippedCards.push(index);
 
     if (this.flippedCards.length === 2) {
+      this.isLocked = true;
       this.moves++;
       this.updateStats();
       this.checkMatch();
@@ -104,8 +111,13 @@ class MemoryGame {
       if (isMatch) {
         this.pairsFound++;
         this.updateStats();
+
+        this.container.children[first].classList.add('matched');
+        this.container.children[second].classList.add('matched');
+
         if (this.pairsFound === this.cards.length / 2) {
-          alert('Congratulations! You won!');
+          stopTimer();
+          document.getElementById('game-complete-message').style.display = 'block';
         }
       } else {
         const cards = this.container.children;
@@ -133,4 +145,8 @@ class MemoryGame {
 
 // Initialize the game
 const game = new MemoryGame(document.getElementById('gameBoard'));
-document.getElementById('restart').addEventListener('click', () => game.restart());
+document.getElementById('restart').addEventListener('click', () => {
+  game.restart();
+  resetTimer();
+  startTimer();
+});
